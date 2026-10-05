@@ -55,7 +55,7 @@ def main():
         print(f"Error reading {path}: {e}")
         sys.exit(1)
     theta0, theta1 = train(km, price)
-    with open("theta.json", "w") as f:
+    with open("thetas.json", "w") as f:
         json.dump({"theta0": theta0, "theta1": theta1}, f)
     print(f"Training done: theta0 = {theta0:.4f}, theta1 = {theta1:.6f}")
 
